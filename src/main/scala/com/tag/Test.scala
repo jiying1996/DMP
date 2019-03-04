@@ -55,7 +55,7 @@ object Test {
         sb.append(Integer.toHexString((array(i) & 0xFF) | 0x100).substring(1, 3))
 
         {
-          i += 1;
+          i += 1
           i
         }
       }

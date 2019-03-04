@@ -1,6 +1,5 @@
 package com.tag
 
-import com.utils.LocationUtils
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.sql.{Row, SQLContext}

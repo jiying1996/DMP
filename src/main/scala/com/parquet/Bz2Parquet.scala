@@ -2,8 +2,10 @@ package com.parquet
 
 import java.util.Properties
 
+import akka.event.slf4j.Logger
 import com.typesafe.config.ConfigFactory
 import com.utils.{NBF, SchemaUtils}
+import org.apache.log4j.Logger
 import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -17,6 +19,7 @@ object Bz2Parquet {
       println("目录不正确，退出程序！")
       sys.exit()
     }
+    val logger = new Logger
     // 创建一个集合，存储输入输出目录
     val Array(inputPath, outputPath) = args
     val conf = new SparkConf()
